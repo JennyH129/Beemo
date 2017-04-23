@@ -7,7 +7,7 @@ import java.util.ArrayList;
 //ensures that only comparables are used but gives full access to the generic lements so they don't need to be typecasted outside
 //to stop a warning: Comparable<? super T> means that the comparable is of type T or one of it's super classes (represented by the ? placeholder).
 //ie T is a subclass of a comparable that can be compared to any class that is a superclass of T
-public class ArrayPriorityQueue<T extends Comparable<T>> {
+public class ArrayPriorityQueue<T extends Comparable<T>> implements PriorityQueue<T> {
     private ArrayList<T> _list;
     public ArrayPriorityQueue() {
         _list = new ArrayList<T>();
